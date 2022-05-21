@@ -1,0 +1,78 @@
+.subscription-form {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // flex-wrap: wrap;
+    margin-top: 60px;
+
+    @media screen and (min-width: $desktop) {
+        margin-top: 12px;
+    }
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+
+.subscription-form__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primary-white-color;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.email-form__input { 
+    margin-top: 20px;  
+    padding: 15px 16px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+
+    font-weight: 400;
+    color: $primary-white-color;
+
+    &:focus {
+        outline: 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 358px;
+    }
+}
+
+.email-form__button {
+    @extend %button;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 20px;
+    width: 200px;
+    padding: 10px 29px;
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 12px;
+    }
+}
+
+.email-form__icon {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icon-send.svg);
+}
