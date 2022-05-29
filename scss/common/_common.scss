@@ -3,6 +3,11 @@ body {
     font-family: $primary-font-family;
     font-weight: 400;
     letter-spacing: 0.03em;
+
+    &.modal-open {
+        overflow: hidden;
+    }
+
 }
 
 .container {
