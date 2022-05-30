@@ -1,35 +1,100 @@
 .page-header {
-    height: 60px;
     border-bottom: 1px solid #ECECEC;
 
     font-weight: 500;
     letter-spacing: 0.02em;
     line-height: 1.17;
 
+    @media screen and (max-width: 767px) {
+        height: 60px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        font-size: 14px;    }
+
+
     &__container {
         display: flex;
         align-items: center;
-        align-content: space-between;
-        justify-content: space-between;
         height: 100%;
+
+        @media screen and (max-width: 767px) {
+            align-content: space-between;
+            justify-content: space-between;
+        }
+    }
+}
+
+.menu-container {
+    @media screen and (max-width: 767px) {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        height: 100%;
+
+        min-width: 350px;
+        margin: 0 auto;
+        padding: 40px 30px;
+        background-color: $primary-white-color;
+
+        &.is-open {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        width: 100%;
+
+        margin-left: 93px;
+    }
+
+}
+
+.container-end {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
 .site-nav__item:not(:last-child) {
     margin-bottom: 32px;
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 50px;
+        margin-bottom: 0;
+    }
+}
+
+.site-nav {
+    @media screen and (min-width: $tablet) {
+        margin-right: auto;
+    }
 }
 
 .site-nav__list {
     @extend %list;
     display: flex;
-    flex-grow: 2;
     margin: 0;
 
     @media screen and (max-width: 767px) {
         display: inline;
-
+        flex-grow: 2;
         font-size: 40px;
     }
+//     @media screen and (min-width: $tablet) {
+//         margin-right: auto;
+//     }
 }
 
 .site-nav__link {
@@ -49,7 +114,10 @@
     }
 
     @media screen and (min-width: $tablet) {
+        display: block;
         position: relative;
+        padding-top: 32px;
+        padding-bottom: 32px;
 
         &::after {
             content: ' ';
@@ -80,17 +148,19 @@
 .contacts {
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+    }  
+
 }
+    
 .contacts__link {
-    font-size: 24px;
     color: $secondary-text-color;
     text-decoration: none;
 
     transition: color 250ms $o-animation-timing-function, fill 250ms $o-animation-timing-function;
 
-    &:not(:last-child) {
-        margin-top: 32px;
-    }
     &:hover,
     &:focus {
         color: $accent-color;
@@ -98,6 +168,12 @@
     }
 
     @media screen and (max-width: 767px) {
+        font-size: 24px;
+
+        &:not(:last-child) {
+            margin-top: 32px;
+        }
+
         &--tel {
             order: -1;
             font-size: 34px;
@@ -112,6 +188,17 @@
         fill: $secondary-text-color;
 
         transition: fill 250ms $o-animation-timing-function;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            &:not(:last-child) {
+                margin-right: 30px;
+                margin-bottom: 0; 
+            }
+        }
     }
 }
 
