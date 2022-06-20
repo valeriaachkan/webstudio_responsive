@@ -311,7 +311,7 @@ body.modal-open {
 }
 
 .container {
-  min-width: 350px;
+  min-width: 320px;
   margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px;
@@ -336,7 +336,7 @@ body.modal-open {
 }
 
 .section {
-  min-width: 350px;
+  min-width: 320px;
   padding-bottom: 60px;
   padding-top: 60px;
 }
@@ -416,7 +416,7 @@ body.modal-open {
     width: 100%;
     z-index: 999;
     height: 100%;
-    min-width: 350px;
+    min-width: 320px;
     margin: 0 auto;
     padding: 40px 30px;
     background-color: #FFFFFF;
